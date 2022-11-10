@@ -1,14 +1,18 @@
 package com.cos.vblog.comm;
 
 
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+@Controller
 public class BlogController {
 
-    @GetMapping("/test/hello")
-    public String hello(){
-        return "<h1>blogTest<h1>";
+    @GetMapping("/hello")
+    public String hello(Model model){
+
+        return "Test";
     }
 }
